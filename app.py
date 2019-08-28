@@ -11,7 +11,7 @@ from sklearn.externals import joblib
 app = Flask(__name__)
 Bootstrap(app)
 
-
+@app.route('/save', methods=['post'])
 @app.route('/')
 def index():
 	return render_template('index.html')
